@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SALVO GROUP - Master Subject-Verb Agreement | Advanced Grammar</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6edfc 100%);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+        }
+
+        .app-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Glass morphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+            transition: all 0.2s ease;
+        }
+
+        .hero {
+            background: linear-gradient(105deg, #ffffffcc 0%, #f0f4ffff 100%);
+            backdrop-filter: blur(12px);
+            border-radius: 2rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255,255,240,0.7);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(120deg, #C62828, #0D47A1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+        }
+
+        .hero h1 i {
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+            color: #C62828;
+            margin-right: 12px;
+        }
+
+        .badge {
+            background: #1e3a8a20;
+            backdrop-filter: blur(4px);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #0b2f6e;
+            border: 1px solid #ffffff90;
+        }
+
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            padding: 0.7rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            transition: 0.2s;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #0b2f6e;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .btn-glass i {
+            margin-right: 8px;
+        }
+
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.85);
+            transform: translateY(-2px);
+            border-color: #C6282880;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary-glass {
+            background: #0D47A1dd;
+            backdrop-filter: blur(8px);
+            color: white;
+            border: none;
+            box-shadow: 0 6px 14px #0D47A150;
+        }
+
+        .btn-primary-glass:hover {
+            background: #0a3b83;
+            transform: translateY(-2px);
+        }
+
+        .score-panel {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .score-stats {
+            display: flex;
+            gap: 1.5rem;
+            background: rgba(255,255,240,0.5);
+            padding: 0.5rem 1.3rem;
+            border-radius: 2rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .score-stats span {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .progress-level {
+            background: #e9ecef;
+            border-radius: 40px;
+            height: 10px;
+            width: 180px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #C62828, #0D47A1);
+            width: 0%;
+            height: 100%;
+            border-radius: 40px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px 0 10px;
+        }
+
+        .material-box {
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .material-box h2 {
+            color: #0D47A1;
+            font-weight: 700;
+            border-left: 5px solid #C62828;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .rule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .rule-item {
+            background: rgba(255,255,245,0.75);
+            border-radius: 1.2rem;
+            padding: 1rem;
+            border-left: 4px solid #C62828;
+        }
+
+        .quiz-container {
+            padding: 1.8rem;
+        }
+
+        .question-card {
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.8rem;
+            border: 1px solid #ffffffb0;
+        }
+
+        .question-text {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #1f2a4e;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.8rem;
+        }
+
+        .opt-label {
+            background: #f8faff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 1rem;
+            border: 1px solid #ccd7f0;
+            cursor: pointer;
+            transition: 0.1s;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="radio"] {
+            accent-color: #C62828;
+            margin-right: 12px;
+            transform: scale(1.1);
+        }
+
+        .opt-label.selected {
+            background: #0D47A1;
+            color: white;
+            border-color: #0D47A1;
+        }
+
+        .feedback {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .feedback.correct {
+            background: #c8e6d9;
+            color: #1e4a2f;
+            border-left: 4px solid #2e7d32;
+        }
+
+        .feedback.wrong {
+            background: #ffdddd;
+            color: #b91c1c;
+            border-left: 4px solid #c62828;
+        }
+
+        .result-summary {
+            background: linear-gradient(145deg, #ffffffcc, #eef3ffcc);
+            border-radius: 1.5rem;
+            padding: 1.2rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            body { padding: 1rem; }
+            .hero h1 { font-size: 1.6rem; }
+            .opt-label { padding: 0.5rem 0.8rem; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="app-container">
+    <div class="hero">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 1rem;">
+            <div>
+                <h1><i class="fas fa-check-double"></i> SALVO GROUP - VERB AGREEMENT</h1>
+                <p style="color:#2c3e66; margin-top: 0.3rem;">Master Subject-Verb Agreement | 50 Soal Profesional + Pembahasan | salvoonlineclass.com</p>
+            </div>
+            <div class="badge"><i class="fas fa-graduation-cap"></i> Advanced Grammar</div>
+        </div>
+    </div>
+
+    <div class="glass-card" style="padding: 1rem 1.8rem; margin-bottom: 1.5rem;">
+        <div class="score-panel">
+            <div class="score-stats">
+                <span><i class="fas fa-check-circle" style="color:#2e7d32;"></i> Benar: <span id="correctCount">0</span></span>
+                <span><i class="fas fa-times-circle" style="color:#c62828;"></i> Salah: <span id="wrongCount">0</span></span>
+                <span><i class="fas fa-chart-line"></i> Progress: <span id="answeredCount">0</span>/50</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div class="progress-level"><div class="progress-fill" id="progressFill"></div></div>
+                <span><strong id="masteryPercent">0</strong>% Mastery</span>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn-glass" id="navMateriBtn"><i class="fas fa-book-open"></i> Materi</button>
+            <button class="btn-glass btn-primary-glass" id="navQuizBtn"><i class="fas fa-puzzle-piece"></i> Latihan Soal (50)</button>
+            <button class="btn-glass" id="resetQuizBtn"><i class="fas fa-undo-alt"></i> Reset Jawaban</button>
+            <button class="btn-glass" id="homeMenuBtn"><i class="fas fa-home"></i> Menu Awal</button>
+        </div>
+    </div>
+
+    <div id="materiSection" class="glass-card material-box">
+        <h2><i class="fas fa-gavel"></i> 📖 SUBJECT-VERB AGREEMENT (LENGKAP)</h2>
+        <p style="margin-bottom: 1rem;"><strong>Verb Agreement</strong> adalah aturan bahwa kata kerja harus sesuai dengan subjek dalam hal <strong>jumlah (singular/plural)</strong>. Simak aturan utama:</p>
+        <div class="rule-grid">
+            <div class="rule-item"><i class="fas fa-user"></i> <strong>1. Subjek Singular → verb + s/es</strong><br> Ex: She <u>works</u> hard. The cat <u>runs</u> fast.</div>
+            <div class="rule-item"><i class="fas fa-users"></i> <strong>2. Subjek Plural → verb tanpa s</strong><br> Ex: They <u>play</u> soccer. The dogs <u>bark</u>.</div>
+            <div class="rule-item"><i class="fas fa-link"></i> <strong>3. Compound subject with 'and' → plural</strong><br> Ex: Tom and Jerry <u>are</u> friends.</div>
+            <div class="rule-item"><i class="fas fa-code-branch"></i> <strong>4. Either/Or, Neither/Nor → verb ikuti subjek terdekat</strong><br> Ex: Neither the teacher nor the students <u>are</u> ready.</div>
+            <div class="rule-item"><i class="fas fa-chart-line"></i> <strong>5. Indefinite pronouns (everyone, each, someone) → singular</strong><br> Ex: Everyone <u>likes</u> music.</div>
+            <div class="rule-item"><i class="fas fa-cubes"></i> <strong>6. Collective nouns (team, family) → singular/plural (makna kesatuan/individu)</strong><br> Ex: The team <u>is</u> winning (kesatuan).</div>
+            <div class="rule-item"><i class="fas fa-infinity"></i> <strong>7. Expressions of quantity (a lot of, some) → tergantung objek</strong><br> Ex: Some of the cake <u>is</u> left / Some cookies <u>are</u> gone.</div>
+            <div class="rule-item"><i class="fas fa-clock"></i> <strong>8. Titles, distances, sums → singular</strong><br> Ex: Ten dollars <u>is</u> enough. “The Hobbit” <u>is</u> a book.</div>
+        </div>
+        <p style="margin-top: 1.2rem; background: #eef2ffaa; padding: 0.8rem; border-radius: 1rem;"><i class="fas fa-lightbulb"></i> <strong>Tips Penting:</strong> Jangan tertipu dengan frasa di antara subjek & verb. Fokus pada subjek utama!</p>
+    </div>
+
+    <div id="quizSection" class="glass-card quiz-container" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+            <h2><i class="fas fa-question-circle"></i> 50 Soal Latihan Profesional</h2>
+            <span id="quizCounterDisplay" style="font-weight: 500;">Soal ke-1/50</span>
+        </div>
+        <div id="questionsContainer"></div>
+        <div style="display: flex; justify-content: center; margin-top: 1.5rem; gap: 20px;">
+            <button class="btn-glass" id="prevBtn"><i class="fas fa-chevron-left"></i> Sebelumnya</button>
+            <button class="btn-glass" id="nextBtn">Selanjutnya <i class="fas fa-chevron-right"></i></button>
+            <button class="btn-glass btn-primary-glass" id="submitAllBtn"><i class="fas fa-clipboard-list"></i> Tampilkan Skor & Kunci</button>
+        </div>
+        <div id="resultArea" class="result-summary" style="display: none;"></div>
+    </div>
+</div>
+
+<script>
+    // ======================= 50 SOAL PROFESIONAL DENGAN 4 PILIHAN =======================
+    const questionsData = [
+        { text: "The committee _____ in disagreement about the proposed budget cuts.", options: ["is", "are", "has", "have"], correct: 1, explanation: "Committee sebagai anggota individu yang berbeda pendapat → menggunakan kata kerja plural 'are'." },
+        { text: "Neither the CEO nor the board members _____ willing to compromise.", options: ["is", "are", "was", "were"], correct: 1, explanation: "Mengikuti subjek terdekat 'board members' (plural) → 'are'." },
+        { text: "Every one of the newly hired employees _____ to undergo a background check.", options: ["need", "needs", "has need", "are needing"], correct: 1, explanation: "'Every one' → singular → memerlukan 'needs'." },
+        { text: "The flock of sheep _____ grazing peacefully when the storm began.", options: ["was", "were", "is", "are"], correct: 0, explanation: "Flock sebagai kesatuan → singular 'was' (past tense)." },
+        { text: "Either the technical director or his assistants _____ going to supervise the installation.", options: ["is", "are", "was", "were"], correct: 1, explanation: "Subjek terdekat 'assistants' plural → 'are'." },
+        { text: "Fifty thousand dollars _____ considered a reasonable compensation for the damages.", options: ["is", "are", "were", "have"], correct: 0, explanation: "Jumlah uang dianggap singular → 'is'." },
+        { text: "The singer and songwriter _____ scheduled to perform an acoustic set tonight.", options: ["is", "are", "were", "have"], correct: 0, explanation: "Satu orang dengan dua peran → singular 'is'." },
+        { text: "A number of factors _____ to the company's unexpected success.", options: ["contribute", "contributes", "has contributed", "is contributing"], correct: 0, explanation: "'A number of' + plural noun → kata kerja plural 'contribute'." },
+        { text: "The number of participants in the marathon _____ significantly over the past decade.", options: ["have increased", "has increased", "are increasing", "were increasing"], correct: 1, explanation: "'The number of' → singular → 'has increased'." },
+        { text: "Mathematics _____ always been a challenging subject for many students.", options: ["have", "has", "are", "were"], correct: 1, explanation: "Nama mata pelajaran meskipun berakhiran -s → singular → 'has'." },
+        { text: "The pair of antique vases _____ carefully preserved in the museum.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "'A pair' → singular → 'is'." },
+        { text: "All of the evidence _____ been thoroughly examined by the forensic team.", options: ["have", "has", "were", "are"], correct: 1, explanation: "Evidence (uncountable) → singular → 'has'." },
+        { text: "Neither of the proposed solutions _____ acceptable to the board.", options: ["seem", "seems", "are seeming", "have seemed"], correct: 1, explanation: "Neither + of plural → formal singular → 'seems'." },
+        { text: "The police _____ investigating the series of robberies that occurred last month.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "Police selalu plural → 'are'." },
+        { text: "Each of the candidates _____ required to submit a financial disclosure form.", options: ["are", "is", "were", "have been"], correct: 1, explanation: "Each → singular → 'is'." },
+        { text: "The team _____ celebrating their individual achievements after the championship.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "The team is celebrating its victory. → fokus ke tim sebagai satu unit, The team are celebrating their individual achievements. → fokus ke masing-masing anggota" },
+        { text: "Three weeks _____ not enough time to complete such a complex project.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "Periode waktu dianggap singular → 'is'." },
+        { text: "The news from the front lines _____ increasingly discouraging.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "News singular → 'is'." },
+        { text: "More than one employee _____ expressed concern about the new policy.", options: ["have", "has", "were", "are"], correct: 1, explanation: "More than one + singular noun → 'has'." },
+        { text: "The scissors that you left on the table _____ very sharp.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "Scissors plural → 'are'." },
+        { text: "There _____ a number of reasons why the project failed.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "'A number of reasons' plural → 'are'." },
+        { text: "The chairman, together with his advisors, _____ reviewing the annual report.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "Frasa 'together with' tidak mengubah subjek utama singular → 'is'." },
+        { text: "Every man, woman, and child _____ entitled to basic human rights.", options: ["are", "is", "were", "have been"], correct: 1, explanation: "Setiap individu singular → 'is'." },
+        { text: "The orchestra _____ playing different melodies during the rehearsal.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "The orchestra were playing different melodies(lebih ke British English) → 'are'." },
+        { text: "Measles _____ a highly contagious viral disease.", options: ["are", "is", "were", "have been"], correct: 1, explanation: "Measles singular → 'is'." },
+        { text: "Both of the candidates _____ highly qualified for the position.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "Both → plural → 'are'." },
+        { text: "The majority of the population _____ in favor of stricter environmental regulations.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "“Majority” di sini dianggap sebagai satu kelompok / satu kesatuan.“Population” juga biasanya diperlakukan sebagai singular." },
+        { text: "Where _____ the glasses that I left on the kitchen counter?", options: ["is", "are", "was", "has been"], correct: 1, explanation: "Glasses (kacamata) plural → 'are'." },
+        { text: "The study of ancient languages _____ a deep understanding of cultural contexts.", options: ["require", "requires", "are requiring", "have required"], correct: 1, explanation: "Subjek 'The study' singular → 'requires'." },
+        { text: "Cattle _____ often graze freely in the rural areas of this region.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "Cattle = sapi-sapi (plural) → 'are'." },
+        { text: "Some of the information provided in the report _____ inaccurate.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "Information uncountable → singular 'is'." },
+        { text: "The jury _____ reached a unanimous verdict after three days of deliberation.", options: ["have", "has", "were", "are"], correct: 1, explanation: "Di sini fokusnya pada satu kesatuan (mereka mencapai satu keputusan bersama: unanimous verdict) 'has'." },
+        { text: "There _____ a laptop and several notebooks on the professor's desk.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "Existential there + singular pertama (a laptop) → 'is'." },
+        { text: "The rich _____ often criticized for their disproportionate influence on politics.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "Adjective as noun (the rich) → plural 'are'." },
+        { text: "Neither the manager nor his subordinates _____ aware of the upcoming audit.", options: ["was", "were", "is", "has been"], correct: 1, explanation: "Subjek terdekat 'subordinates' plural → past tense 'were'." },
+        { text: "The athlete, along with his trainers, _____ currently at the training facility.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "Subjek utama athlete singular → 'is'." },
+        { text: "Many a student _____ struggled with the nuances of subject-verb agreement.", options: ["have", "has", "were", "are"], correct: 1, explanation: "Many a + singular noun → 'has'." },
+        { text: "The pants that you bought online _____ too tight around the waist.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "Pants plural → 'are'." },
+        { text: "Either the president or the vice president _____ expected to attend the ceremony.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "Subjek terdekat 'vice president' singular → 'is'." },
+        { text: "The staff _____ having a heated discussion about the new work schedule.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "Di sini konteksnya menunjukkan anggota-anggota sedang berdiskusi (beda pendapat). 'are'." },
+        { text: "A significant portion of the budget _____ allocated for research and development.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "Subjek utamanya adalah “portion” (bukan “budget”). “A portion” dianggap singular.→ 'is'." },
+        { text: "The editor and the publisher _____ decided to collaborate on a new project.", options: ["has", "have", "is", "are"], correct: 1, explanation: "Dua orang berbeda (ada 'the' kedua) → plural 'have'." },
+        { text: "None of the equipment _____ functioning properly after the power surge.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "Equipment uncountable → singular 'is'." },
+        { text: "The acoustics in the new concert hall _____ exceptional.", options: ["is", "are", "was", "has been"], correct: 1, explanation: "Acoustics dalam konteks kualitas → plural 'are'." },
+        { text: "Each of the novels _____ a unique perspective on modern society.", options: ["offer", "offers", "are offering", "have offered"], correct: 1, explanation: "Each + of plural → singular 'offers'." },
+        { text: "The Philippines _____ a country consisting of more than 7,000 islands.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "Nama negara singular → 'is'." },
+        { text: "Ten minutes _____ the maximum time allowed for each presentation.", options: ["is", "are", "were", "have been"], correct: 0, explanation: "Periode waktu singular → 'is'." },
+        { text: "The possibility of layoffs _____ many employees anxious.", options: ["make", "makes", "are making", "have made"], correct: 1, explanation: "Subjek 'The possibility' singular → 'makes'." },
+        { text: "A series of lectures _____ been scheduled for the upcoming conference.", options: ["have", "has", "are", "were"], correct: 1, explanation: "'A series' singular → 'has'." }
+    ];
+
+    let userAnswers = new Array(50).fill(-1);
+    let currentPage = 0;
+    let currentQuestionIndex = 0;
+    
+    const materiDiv = document.getElementById('materiSection');
+    const quizDiv = document.getElementById('quizSection');
+    const correctSpan = document.getElementById('correctCount');
+    const wrongSpan = document.getElementById('wrongCount');
+    const answeredSpan = document.getElementById('answeredCount');
+    const masterySpan = document.getElementById('masteryPercent');
+    const progressFill = document.getElementById('progressFill');
+    const quizCounterDisplay = document.getElementById('quizCounterDisplay');
+    const questionsContainer = document.getElementById('questionsContainer');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitAllBtn = document.getElementById('submitAllBtn');
+    const resultArea = document.getElementById('resultArea');
+    const navMateri = document.getElementById('navMateriBtn');
+    const navQuiz = document.getElementById('navQuizBtn');
+    const resetBtn = document.getElementById('resetQuizBtn');
+    const homeBtn = document.getElementById('homeMenuBtn');
+
+    function updateStats() {
+        let answered = userAnswers.filter(a => a !== -1).length;
+        let correct = 0, wrong = 0;
+        for (let i = 0; i < 50; i++) {
+            if (userAnswers[i] !== -1) {
+                if (userAnswers[i] === questionsData[i].correct) correct++;
+                else wrong++;
+            }
+        }
+        correctSpan.innerText = correct;
+        wrongSpan.innerText = wrong;
+        answeredSpan.innerText = answered;
+        let percent = answered === 0 ? 0 : Math.round((correct / answered) * 100);
+        masterySpan.innerText = percent;
+        progressFill.style.width = `${(answered / 50) * 100}%`;
+    }
+
+    function renderCurrentQuestion() {
+        const q = questionsData[currentQuestionIndex];
+        const selectedIdx = userAnswers[currentQuestionIndex];
+        let html = `<div class="question-card"><div class="question-text">${currentQuestionIndex+1}. ${q.text}</div><div class="options">`;
+        q.options.forEach((opt, idx) => {
+            let checkedAttr = (selectedIdx === idx) ? 'checked' : '';
+            html += `<label class="opt-label"><input type="radio" name="q${currentQuestionIndex}" value="${idx}" ${checkedAttr} onchange="setAnswer(${currentQuestionIndex}, ${idx})"> ${opt}</label>`;
+        });
+        html += `</div>`;
+        if (selectedIdx !== -1) {
+            let isCorrect = (selectedIdx === q.correct);
+            let feedbackClass = isCorrect ? 'correct' : 'wrong';
+            let feedbackMsg = isCorrect ? '✅ Jawaban Benar! ' : `❌ Jawaban Salah. Jawaban yang tepat: ${q.options[q.correct]}. `;
+            feedbackMsg += q.explanation;
+            html += `<div class="feedback ${feedbackClass}"><i class="fas fa-info-circle"></i> ${feedbackMsg}</div>`;
+        }
+        html += `</div>`;
+        questionsContainer.innerHTML = html;
+        quizCounterDisplay.innerText = `Soal ke-${currentQuestionIndex+1}/50`;
+    }
+
+    window.setAnswer = (qIndex, val) => {
+        userAnswers[qIndex] = val;
+        updateStats();
+        renderCurrentQuestion();
+    };
+
+    function showMateri() { materiDiv.style.display = 'block'; quizDiv.style.display = 'none'; currentPage = 0; }
+    function showQuiz() { materiDiv.style.display = 'none'; quizDiv.style.display = 'block'; currentPage = 1; renderCurrentQuestion(); resultArea.style.display = 'none'; }
+    function resetQuiz() { userAnswers.fill(-1); updateStats(); if (currentPage === 1) { renderCurrentQuestion(); resultArea.style.display = 'none'; } }
+    function homeMenu() { showMateri(); resetQuiz(); resultArea.style.display = 'none'; }
+
+    function showFullScoreAndKeys() {
+        let correctFinal = 0, wrongFinal = 0;
+        let totalAnswered = userAnswers.filter(a=>a!==-1).length;
+        for (let i=0; i<50; i++) if (userAnswers[i] !== -1) userAnswers[i] === questionsData[i].correct ? correctFinal++ : wrongFinal++;
+        let percentMastery = totalAnswered === 0 ? 0 : Math.round((correctFinal / totalAnswered) * 100);
+        let resultHtml = `<h3><i class="fas fa-chart-simple"></i> HASIL EVALUASI</h3>
+        <p><strong>✅ Benar: ${correctFinal}</strong> | ❌ Salah: ${wrongFinal} | 📝 Dijawab: ${totalAnswered}/50</p>
+        <div style="background:#ffffffb0; border-radius:1rem; padding:0.8rem;"><strong>Tingkat Kemampuan: ${percentMastery}%</strong> - `;
+        if (percentMastery >= 85) resultHtml += `🏆 Expert (Excellent)`;
+        else if (percentMastery >= 70) resultHtml += `👍 Mahir (Good)`;
+        else if (percentMastery >= 50) resultHtml += `📘 Menengah (Fair)`;
+        else resultHtml += `📖 Perlu Belajar Lebih Lanjut`;
+        resultHtml += `</div><hr/><div style="max-height:400px; overflow-y:auto; text-align:left;">`;
+        for (let i=0; i<50; i++) {
+            let userPick = userAnswers[i] !== -1 ? questionsData[i].options[userAnswers[i]] : "Tidak dijawab";
+            let correctAns = questionsData[i].options[questionsData[i].correct];
+            let statusIcon = (userAnswers[i] === questionsData[i].correct) ? '✅' : (userAnswers[i] !== -1 ? '❌' : '⚪');
+            resultHtml += `<p><strong>${i+1}. ${questionsData[i].text}</strong><br> ${statusIcon} Jawaban Anda: ${userPick} | Kunci: ${correctAns}<br><span style="font-size:0.75rem;">📘 ${questionsData[i].explanation}</span></p><hr/>`;
+        }
+        resultHtml += `</div><button class="btn-glass" id="closeResultBtn" style="margin-top:12px;"><i class="fas fa-times"></i> Tutup</button>`;
+        resultArea.innerHTML = resultHtml;
+        resultArea.style.display = 'block';
+        document.getElementById('closeResultBtn')?.addEventListener('click', ()=> { resultArea.style.display = 'none'; });
+        updateStats();
+    }
+
+    navMateri.addEventListener('click', showMateri);
+    navQuiz.addEventListener('click', showQuiz);
+    resetBtn.addEventListener('click', resetQuiz);
+    homeBtn.addEventListener('click', homeMenu);
+    prevBtn.addEventListener('click', () => { if(currentQuestionIndex > 0) { currentQuestionIndex--; renderCurrentQuestion(); } });
+    nextBtn.addEventListener('click', () => { if(currentQuestionIndex < 49) { currentQuestionIndex++; renderCurrentQuestion(); } });
+    submitAllBtn.addEventListener('click', showFullScoreAndKeys);
+
+    updateStats();
+    showMateri();
+</script>
+</body>
+</html>
